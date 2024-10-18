@@ -24,12 +24,12 @@ public struct Dice
         return sides.First();
     }
 
-    public decimal CalculateOdds(Range range, int modifier = 0, IEnumerable<int> ignoredSides = [])
+    public decimal CalculateOdds(Range range, int modifier = 0, IEnumerable<int>? ignoredSides = default)
     {
         if (modifier != 0)
             range.ApplyModifier(modifier);
 
-        var relevantSides = ignoredSides.Any()
+        var relevantSides = ignoredSides is not null && ignoredSides.Any()
             ? Sides.Where(x => !ignoredSides.Contains(x))
             : Sides;
 
