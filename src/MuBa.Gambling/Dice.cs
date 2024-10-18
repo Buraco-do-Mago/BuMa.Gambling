@@ -23,4 +23,22 @@ public struct Dice
         random.Shuffle<int>(sides);
         return sides.First();
     }
+
+    public decimal CalculateOdds(Range range, int modifier = 0, IEnumerable<int> ignoredSides = [])
+    {
+        if (modifier != 0)
+            range.ApplyModifier(modifier);
+
+        var relevantSides = ignoredSides.Any()
+            ? Sides.Where(x => !ignoredSides.Contains(x))
+            : Sides;
+
+        if ((range.End is not null && range.End < relevantSides.First()) ||
+                (range.Start is not null && range.Start > relevantSides.Last()))
+            return 0m;
+
+        var sidesInRange = relevantSides.Where(x => range.IsInRange(x));
+
+        return sidesInRange.Count() * 100 / Sides.Count();
+    }
 }
