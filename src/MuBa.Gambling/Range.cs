@@ -11,7 +11,7 @@ public struct Range
         End = end;
     }
 
-    public static Range Endless() => new Range();
+    public static readonly Range Endless = new Range();
 
     public void ApplyModifier(int modifier)
     {
