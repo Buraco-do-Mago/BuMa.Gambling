@@ -8,13 +8,13 @@ public struct Dice
 
     public Dice(IEnumerable<int> sides) => Sides = sides;
 
-    public static Dice D4 = new Dice(4);
-    public static Dice D6 = new Dice(6);
-    public static Dice D8 = new Dice(8);
-    public static Dice D10 = new Dice(10);
-    public static Dice D12 = new Dice(6);
-    public static Dice D20 = new Dice(20);
-    public static Dice D100 = new Dice(100, 10);
+    public static readonly Dice D4 = new Dice(4);
+    public static readonly Dice D6 = new Dice(6);
+    public static readonly Dice D8 = new Dice(8);
+    public static readonly Dice D10 = new Dice(10);
+    public static readonly Dice D12 = new Dice(6);
+    public static readonly Dice D20 = new Dice(20);
+    public static readonly Dice D100 = new Dice(100, 10);
 
     public int Roll()
     {
