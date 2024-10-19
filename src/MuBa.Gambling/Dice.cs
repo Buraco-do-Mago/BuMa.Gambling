@@ -11,6 +11,7 @@ public struct Dice
         if (sides <= 0)
             throw new InvalidDiceException($"My man, a dice cannot have zero sides.");
         if (step <= 0)
+            throw new InvalidDiceException($"My man, the steps must be greater than zero, or else all of the dice's values will be the same.");
         Sides = Enumerable.Range(1, sides).Select(x => x * step);
     }
 
