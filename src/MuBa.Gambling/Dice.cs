@@ -1,10 +1,18 @@
+using MuBa.Gambling.Exceptions;
+
 namespace MuBa.Gambling;
 
 public struct Dice
 {
     public IEnumerable<int> Sides { get; init; }
 
-    public Dice(int sides, int step = 1) => Sides = Enumerable.Range(1, sides).Select(x => x * step);
+    public Dice(int sides, int step = 1)
+    {
+        if (sides <= 0)
+            throw new InvalidDiceException($"My man, a dice cannot have zero sides.");
+        if (step <= 0)
+        Sides = Enumerable.Range(1, sides).Select(x => x * step);
+    }
 
     public Dice(IEnumerable<int> sides) => Sides = sides;
 
