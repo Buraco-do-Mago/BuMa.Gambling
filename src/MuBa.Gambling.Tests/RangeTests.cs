@@ -12,7 +12,7 @@ public class RangeTests
     [Test]
     public void CreateEndlessRange()
     {
-        var range = Range.Endless();
+        var range = Range.Endless;
         Assert.Pass();
     }
 
@@ -28,7 +28,7 @@ public class RangeTests
     [Test]
     public void ModifyEndlessRange()
     {
-        var range = Range.Endless();
+        var range = Range.Endless;
         range.ApplyModifier(10);
         Assert.Pass();
     }
@@ -44,7 +44,7 @@ public class RangeTests
     [Test]
     public void AssertAnyNumberIsInEndlessRange()
     {
-        var range = Range.Endless();
+        var range = Range.Endless;
         Assert.That(range.IsInRange(-100));
         Assert.That(range.IsInRange(0));
         Assert.That(range.IsInRange(100));
