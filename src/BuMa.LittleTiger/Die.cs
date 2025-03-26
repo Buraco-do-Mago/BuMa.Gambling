@@ -1,6 +1,6 @@
-using BuMa.Gambling.Exceptions;
+using BuMa.LittleTiger.Exceptions;
 
-namespace BuMa.Gambling;
+namespace BuMa.LittleTiger;
 
 public readonly struct Die
 {
