@@ -1,17 +1,11 @@
-﻿namespace MuBa.Gambling;
+﻿namespace BuMa.Gambling;
 
-public struct Range
+public struct Range(int? start = null, int? end = null)
 {
-    public int? Start { get; private set; }
-    public int? End { get; private set; }
+    public int? Start { get; private set; } = start;
+    public int? End { get; private set; } = end;
 
-    public Range(int? start = default, int? end = default)
-    {
-        Start = start;
-        End = end;
-    }
-
-    public static readonly Range Endless = new Range();
+    public static readonly Range Endless = new();
 
     public void ApplyModifier(int modifier)
     {

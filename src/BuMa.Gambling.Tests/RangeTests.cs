@@ -1,4 +1,4 @@
-namespace MuBa.Gambling.Tests;
+namespace BuMa.Gambling.Tests;
 
 public class RangeTests
 {
@@ -37,7 +37,7 @@ public class RangeTests
     public void AssertNumberIsInRange()
     {
         var range = new Range(1, 10);
-        for (int i = 1; i <= 10; i++)
+        for (var i = 1; i <= 10; i++)
             Assert.That(range.IsInRange(i));
     }
 
@@ -45,18 +45,24 @@ public class RangeTests
     public void AssertAnyNumberIsInEndlessRange()
     {
         var range = Range.Endless;
-        Assert.That(range.IsInRange(-100));
-        Assert.That(range.IsInRange(0));
-        Assert.That(range.IsInRange(100));
-        Assert.That(range.IsInRange(int.MinValue));
-        Assert.That(range.IsInRange(int.MaxValue));
+        Assert.Multiple(() =>
+        {
+            Assert.That(range.IsInRange(-100));
+            Assert.That(range.IsInRange(0));
+            Assert.That(range.IsInRange(100));
+            Assert.That(range.IsInRange(int.MinValue));
+            Assert.That(range.IsInRange(int.MaxValue));
+        });
     }
 
     [Test]
     public void AssertNumberIsNotInRange()
     {
         var range = new Range(1, 10);
-        Assert.That(range.IsInRange(-10), Is.False);
-        Assert.That(range.IsInRange(20), Is.False);
+        Assert.Multiple(() =>
+        {
+            Assert.That(range.IsInRange(-10), Is.False);
+            Assert.That(range.IsInRange(20), Is.False);
+        });
     }
 }

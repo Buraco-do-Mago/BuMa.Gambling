@@ -1,4 +1,4 @@
-namespace MuBa.Gambling.Tests;
+namespace BuMa.Gambling.Tests;
 
 public class DiceTests
 {

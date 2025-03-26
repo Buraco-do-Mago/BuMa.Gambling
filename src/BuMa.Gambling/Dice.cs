@@ -1,6 +1,6 @@
-using MuBa.Gambling.Exceptions;
+using BuMa.Gambling.Exceptions;
 
-namespace MuBa.Gambling;
+namespace BuMa.Gambling;
 
 public struct Dice
 {
@@ -9,21 +9,21 @@ public struct Dice
     public Dice(int sides, int step = 1)
     {
         if (sides <= 0)
-            throw new InvalidDiceException($"My man, a dice cannot have zero sides.");
+            throw new InvalidDiceException("My man, a dice cannot have zero sides.");
         if (step <= 0)
-            throw new InvalidDiceException($"My man, the steps must be greater than zero, or else all of the dice's values will be the same.");
+            throw new InvalidDiceException("My man, the steps must be greater than zero, or else all of the die's values will be the same.");
         Sides = Enumerable.Range(1, sides).Select(x => x * step);
     }
 
     public Dice(IEnumerable<int> sides) => Sides = sides;
 
-    public static readonly Dice D4 = new Dice(4);
-    public static readonly Dice D6 = new Dice(6);
-    public static readonly Dice D8 = new Dice(8);
-    public static readonly Dice D10 = new Dice(10);
-    public static readonly Dice D12 = new Dice(6);
-    public static readonly Dice D20 = new Dice(20);
-    public static readonly Dice D100 = new Dice(100, 10);
+    public static readonly Dice D4 = new(4);
+    public static readonly Dice D6 = new(6);
+    public static readonly Dice D8 = new(8);
+    public static readonly Dice D10 = new(10);
+    public static readonly Dice D12 = new(6);
+    public static readonly Dice D20 = new(20);
+    public static readonly Dice D100 = new(100, 10);
 
     public int Roll()
     {
