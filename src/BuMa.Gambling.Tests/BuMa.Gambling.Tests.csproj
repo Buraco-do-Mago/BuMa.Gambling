@@ -23,7 +23,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BuMa.Gambling\BuMa.Gambling.csproj" />
-    <ProjectReference Include="..\MuBa.Gambling\MuBa.Gambling.csproj" />
   </ItemGroup>
 
 </Project>
