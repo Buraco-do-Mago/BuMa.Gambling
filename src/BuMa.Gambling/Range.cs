@@ -1,4 +1,4 @@
-﻿namespace BuMa.LittleTiger;
+﻿namespace BuMa.Gambling;
 
 public struct Range(int? start = null, int? end = null)
 {

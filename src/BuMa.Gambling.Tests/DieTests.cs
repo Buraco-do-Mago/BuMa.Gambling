@@ -1,7 +1,7 @@
-using BuMa.LittleTiger;
-using Range = BuMa.LittleTiger.Range;
+using BuMa.Gambling;
+using Range = BuMa.Gambling.Range;
 
-namespace Buma.LittleTiger.Tests;
+namespace Buma.Gambling.Tests;
 
 public class DieTests
 {

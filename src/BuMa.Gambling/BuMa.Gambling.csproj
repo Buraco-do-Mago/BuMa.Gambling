@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Version>1.0.0</Version>
-    <PackageId>BuMaSoft.LittleTiger</PackageId>
+    <PackageId>BuMa.Gambling</PackageId>
     <Authors>lucaaaaum</Authors>
     <Company>BuMa Software</Company>
   </PropertyGroup>

@@ -1,4 +1,4 @@
-namespace BuMa.LittleTiger.Exceptions;
+namespace BuMa.Gambling.Exceptions;
 
 public class InvalidDieException(string? message) : Exception(message);
 

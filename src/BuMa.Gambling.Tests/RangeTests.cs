@@ -1,6 +1,6 @@
-using Range = BuMa.LittleTiger.Range;
+using Range = BuMa.Gambling.Range;
 
-namespace Buma.LittleTiger.Tests;
+namespace Buma.Gambling.Tests;
 
 public class RangeTests
 {
