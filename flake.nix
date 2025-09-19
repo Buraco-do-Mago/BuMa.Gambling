@@ -2,7 +2,7 @@
   description = "gambling project flake";
   
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -14,9 +14,7 @@
     in with pkgs;{
       devShells.default = mkShell {
         buildInputs = [
-          dotnet-sdk_8
-          dotnet-runtime_8
-          dotnet-aspnetcore_8
+          dotnet-sdk_9
         ];
       };
     });
