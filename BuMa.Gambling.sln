@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D42787FA-FB0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuMa.Gambling", "src\BuMa.Gambling\BuMa.Gambling.csproj", "{4D835550-D98F-4A46-B5DC-157A9C5EFA8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuMa.Gambling.Tests", "src\BuMa.Gambling.Tests\BuMa.Gambling.Tests.csproj", "{FC511076-9830-4FD8-BDED-95529E201478}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuMa.Gambling.Tests", "tests\BuMa.Gambling.Tests\BuMa.Gambling.Tests.csproj", "{FC511076-9830-4FD8-BDED-95529E201478}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
